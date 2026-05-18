@@ -1,18 +1,296 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Закрывающий тег</title>
-    <link rel="stylesheet" href="./fonts/fonts.css" />
-    <link rel="stylesheet" href="./styles/variables.css" />
-    <link rel="stylesheet" href="./styles/globals.css" />
-    <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="stylesheet" href="./styles/animations.css" />
-  </head>
-  <body class="page">
-    <header class="header"></header>
-    <main></main>
-    <script src="./scripts/like.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Закрывающий тег — Моё путешествие в вёрстке</title>
+  <link rel="icon" href="./images/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="./images/mobile-icon.png">
+  <link rel="stylesheet" href="./fonts/fonts.css">
+  <link rel="stylesheet" href="./styles/variables.css">
+  <link rel="stylesheet" href="./styles/globals.css">
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="./styles/animations.css">
+</head>
+<body class="page">
+  <header class="header">
+    <a href="#" class="header__logo">Закрывающий тег</a>
+    <h1 class="header__title">Мой путь в вёрстке</h1>
+  </header>
+
+  <main class="content">
+    <!-- КАРТОЧКА 1 -->
+    <article class="card">
+      <div class="card__image-container">
+        <img class="card__image card__image--grayscale" src="./images/photo1.jpg" alt="Страх перед неизвестностью" loading="lazy">
+        <span class="card__label">Страх</span>
+      </div>
+      <h2 class="card__title">Шаг 1. Первый день</h2>
+      <p class="card__text">Когда я только открыл первый урок, мне казалось, что HTML — это магия. &lt;div&gt; &lt;/div&gt; — что это вообще такое? Руки дрожали, но я решил не сдаваться.</p>
+      <div class="card__buttons">
+        <button class="card__icon-button">
+          <svg class="like-icon" width="40" height="36" viewBox="0 0 40 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g class="heart">
+              <path class="contour" d="M20 34L3.5 18C3.5 18 0 15 0 10C0 5 3 2 8 2C12 2 16 6 20 10C24 6 28 2 32 2C37 2 40 5 40 10C40 15 36.5 18 36.5 18L20 34Z" fill="none" stroke="var(--contour-color, #000000)" stroke-width="2"/>
+              <path class="main-body" d="M20 30L7.5 18C7.5 18 5 15.5 5 11.5C5 7.5 7.5 5 11.5 5C14.5 5 17.5 8 20 11.5C22.5 8 25.5 5 28.5 5C32.5 5 35 7.5 35 11.5C35 15.5 32.5 18 32.5 18L20 30Z" fill="none"/>
+              <path class="core" d="M20 26L11.5 18C11.5 18 10 16 10 13.5C10 11 11.5 9.5 14 9.5C16 9.5 18 11.5 20 14C22 11.5 24 9.5 26 9.5C28.5 9.5 30 11 30 13.5C30 16 28.5 18 28.5 18L20 26Z" fill="none"/>
+            </g>
+            <path class="sparks" d="M20 5L21 8L24 9L21 10L20 13L19 10L16 9L19 8L20 5Z" fill="var(--animation-fill-color, #ff0000)" opacity="0"/>
+            <path class="sparks" d="M30 5L31 7L33 8L31 9L30 11L29 9L27 8L29 7L30 5Z" fill="var(--animation-fill-color, #ff0000)" opacity="0"/>
+            <path class="sparks" d="M10 5L11 7L13 8L11 9L10 11L9 9L7 8L9 7L10 5Z" fill="var(--animation-fill-color, #ff0000)" opacity="0"/>
+          </svg>
+        </button>
+        <button class="card__like-button">
+          <span class="button__text">Like</span>
+        </button>
+      </div>
+    </article>
+
+    <!-- КАРТОЧКА 2 -->
+    <article class="card">
+      <div class="card__image-container">
+        <img class="card__image card__image--sepia" src="./images/photo2.jpg" alt="Первые успехи" loading="lazy">
+        <span class="card__label">Восторг</span>
+      </div>
+      <h2 class="card__title">Шаг 2. Первая вёрстка</h2>
+      <p class="card__text">Когда у меня получилось сверстать первую карточку — я прыгал от счастья! Оказывается, это не так страшно. Главное — понять логику и не бояться экспериментировать.</p>
+      <div class="card__buttons">
+        <button class="card__icon-button">
+          <svg class="like-icon" width="40" height="36" viewBox="0 0 40 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g class="heart">
+              <path class="contour" d="M20 34L3.5 18C3.5 18 0 15 0 10C0 5 3 2 8 2C12 2 16 6 20 10C24 6 28 2 32 2C37 2 40 5 40 10C40 15 36.5 18 36.5 18L20 34Z" fill="none" stroke="var(--contour-color, #000000)" stroke-width="2"/>
+              <path class="main-body" d="M20 30L7.5 18C7.5 18 5 15.5 5 11.5C5 7.5 7.5 5 11.5 5C14.5 5 17.5 8 20 11.5C22.5 8 25.5 5 28.5 5C32.5 5 35 7.5 35 11.5C35 15.5 32.5 18 32.5 18L20 30Z" fill="none"/>
+              <path class="core" d="M20 26L11.5 18C11.5 18 10 16 10 13.5C10 11 11.5 9.5 14 9.5C16 9.5 18 11.5 20 14C22 11.5 24 9.5 26 9.5C28.5 9.5 30 11 30 13.5C30 16 28.5 18 28.5 18L20 26Z" fill="none"/>
+            </g>
+            <path class="sparks" d="M20 5L21 8L24 9L21 10L20 13L19 10L16 9L19 8L20 5Z" fill="var(--animation-fill-color, #ff0000)" opacity="0"/>
+            <path class="sparks" d="M30 5L31 7L33 8L31 9L30 11L29 9L27 8L29 7L30 5Z" fill="var(--animation-fill-color, #ff0000)" opacity="0"/>
+            <path class="sparks" d="M10 5L11 7L13 8L11 9L10 11L9 9L7 8L9 7L10 5Z" fill="var(--animation-fill-color, #ff0000)" opacity="0"/>
+          </svg>
+        </button>
+        <button class="card__like-button">
+          <span class="button__text">Like</span>
+        </button>
+      </div>
+    </article>
+
+    <!-- КАРТОЧКА 3 -->
+    <article class="card">
+      <div class="card__image-container">
+        <img class="card__image card__image--blur" src="./images/photo3.jpg" alt="Трудности и сомнения" loading="lazy">
+        <span class="card__label">Туман</span>
+      </div>
+      <h2 class="card__title">Шаг 3. Первый кризис</h2>
+      <p class="card__text">Позиционирование — моя боль. Абсолютное, относительное, фиксированное... Голова шла кругом. Я несколько раз хотел всё бросить, но что-то внутри говорило: «Продолжай».</p>
+      <div class="card__buttons">
+        <button class="card__icon-button">
+          <svg class="like-icon" width="40" height="36" viewBox="0 0 40 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g class="heart">
+              <path class="contour" d="M20 34L3.5 18C3.5 18 0 15 0 10C0 5 3 2 8 2C12 2 16 6 20 10C24 6 28 2 32 2C37 2 40 5 40 10C40 15 36.5 18 36.5 18L20 34Z" fill="none" stroke="var(--contour-color, #000000)" stroke-width="2"/>
+              <path class="main-body" d="M20 30L7.5 18C7.5 18 5 15.5 5 11.5C5 7.5 7.5 5 11.5 5C14.5 5 17.5 8 20 11.5C22.5 8 25.5 5 28.5 5C32.5 5 35 7.5 35 11.5C35 15.5 32.5 18 32.5 18L20 30Z" fill="none"/>
+              <path class="core" d="M20 26L11.5 18C11.5 18 10 16 10 13.5C10 11 11.5 9.5 14 9.5C16 9.5 18 11.5 20 14C22 11.5 24 9.5 26 9.5C28.5 9.5 30 11 30 13.5C30 16 28.5 18 28.5 18L20 26Z" fill="none"/>
+            </g>
+            <path class="sparks" d="M20 5L21 8L24 9L21 10L20 13L19 10L16 9L19 8L20 5Z" fill="var(--animation-fill-color, #ff0000)" opacity="0"/>
+            <path class="sparks" d="M30 5L31 7L33 8L31 9L30 11L29 9L27 8L29 7L30 5Z" fill="var(--animation-fill-color, #ff0000)" opacity="0"/>
+            <path class="sparks" d="M10 5L11 7L13 8L11 9L10 11L9 9L7 8L9 7L10 5Z" fill="var(--animation-fill-color, #ff0000)" opacity="0"/>
+          </svg>
+        </button>
+        <button class="card__like-button">
+          <span class="button__text">Like</span>
+        </button>
+      </div>
+    </article>
+
+    <!-- КАРТОЧКА 4 -->
+    <article class="card">
+      <div class="card__image-container">
+        <img class="card__image card__image--brightness" src="./images/photo4.jpg" alt="Просветление" loading="lazy">
+        <span class="card__label">Инсайт</span>
+      </div>
+      <h2 class="card__title">Шаг 4. Когда всё встало на места</h2>
+      <p class="card__text">В один момент я понял, как работает Flexbox. Это было похоже на щелчок в голове. Всё вдруг стало логичным и простым. Я наконец-то увидел, как элементы подчиняются мне, а не я им.</p>
+      <div class="card__buttons">
+        <button class="card__icon-button">
+          <svg class="like-icon" width="40" height="36" viewBox="0 0 40 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g class="heart">
+              <path class="contour" d="M20 34L3.5 18C3.5 18 0 15 0 10C0 5 3 2 8 2C12 2 16 6 20 10C24 6 28 2 32 2C37 2 40 5 40 10C40 15 36.5 18 36.5 18L20 34Z" fill="none" stroke="var(--contour-color, #000000)" stroke-width="2"/>
+              <path class="main-body" d="M20 30L7.5 18C7.5 18 5 15.5 5 11.5C5 7.5 7.5 5 11.5 5C14.5 5 17.5 8 20 11.5C22.5 8 25.5 5 28.5 5C32.5 5 35 7.5 35 11.5C35 15.5 32.5 18 32.5 18L20 30Z" fill="none"/>
+              <path class="core" d="M20 26L11.5 18C11.5 18 10 16 10 13.5C10 11 11.5 9.5 14 9.5C16 9.5 18 11.5 20 14C22 11.5 24 9.5 26 9.5C28.5 9.5 30 11 30 13.5C30 16 28.5 18 28.5 18L20 26Z" fill="none"/>
+            </g>
+            <path class="sparks" d="M20 5L21 8L24 9L21 10L20 13L19 10L16 9L19 8L20 5Z" fill="var(--animation-fill-color, #ff0000)" opacity="0"/>
+            <path class="sparks" d="M30 5L31 7L33 8L31 9L30 11L29 9L27 8L29 7L30 5Z" fill="var(--animation-fill-color, #ff0000)" opacity="0"/>
+            <path class="sparks" d="M10 5L11 7L13 8L11 9L10 11L9 9L7 8L9 7L10 5Z" fill="var(--animation-fill-color, #ff0000)" opacity="0"/>
+          </svg>
+        </button>
+        <button class="card__like-button">
+          <span class="button__text">Like</span>
+        </button>
+      </div>
+    </article>
+
+    <!-- КАРТОЧКА 5 -->
+    <article class="card">
+      <div class="card__image-container">
+        <img class="card__image card__image--contrast" src="./images/photo5.jpg" alt="Гриды" loading="lazy">
+        <span class="card__label">Сила</span>
+      </div>
+      <h2 class="card__title">Шаг 5. Покорение Grid</h2>
+      <p class="card__text">Grid-сетки открыли новый мир. Двумерная раскладка, которая раньше казалась чем-то невероятным, теперь стала моим любимым инструментом. Я чувствовал себя архитектором веба.</p>
+      <div class="card__buttons">
+        <button class="card__icon-button">
+          <svg class="like-icon" width="40" height="36" viewBox="0 0 40 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g class="heart">
+              <path class="contour" d="M20 34L3.5 18C3.5 18 0 15 0 10C0 5 3 2 8 2C12 2 16 6 20 10C24 6 28 2 32 2C37 2 40 5 40 10C40 15 36.5 18 36.5 18L20 34Z" fill="none" stroke="var(--contour-color, #000000)" stroke-width="2"/>
+              <path class="main-body" d="M20 30L7.5 18C7.5 18 5 15.5 5 11.5C5 7.5 7.5 5 11.5 5C14.5 5 17.5 8 20 11.5C22.5 8 25.5 5 28.5 5C32.5 5 35 7.5 35 11.5C35 15.5 32.5 18 32.5 18L20 30Z" fill="none"/>
+              <path class="core" d="M20 26L11.5 18C11.5 18 10 16 10 13.5C10 11 11.5 9.5 14 9.5C16 9.5 18 11.5 20 14C22 11.5 24 9.5 26 9.5C28.5 9.5 30 11 30 13.5C30 16 28.5 18 28.5 18L20 26Z" fill="none"/>
+            </g>
+            <path class="sparks" d="M20 5L21 8L24 9L21 10L20 13L19 10L16 9L19 8L20 5Z" fill="var(--animation-fill-color, #ff0000)" opacity="0"/>
+            <path class="sparks" d="M30 5L31 7L33 8L31 9L30 11L29 9L27 8L29 7L30 5Z" fill="var(--animation-fill-color, #ff0000)" opacity="0"/>
+            <path class="sparks" d="M10 5L11 7L13 8L11 9L10 11L9 9L7 8L9 7L10 5Z" fill="var(--animation-fill-color, #ff0000)" opacity="0"/>
+          </svg>
+        </button>
+        <button class="card__like-button">
+          <span class="button__text">Like</span>
+        </button>
+      </div>
+    </article>
+
+    <!-- КАРТОЧКА 6 -->
+    <article class="card">
+      <div class="card__image-container">
+        <img class="card__image card__image--multiple" src="./images/photo6.jpg" alt="Адаптив" loading="lazy">
+        <span class="card__label">Гармония</span>
+      </div>
+      <h2 class="card__title">Шаг 6. Адаптивность</h2>
+      <p class="card__text">Медиазапросы сделали мои сайты живыми. Они подстраиваются под любые экраны — от огромных мониторов до крошечных телефонов. Это как магия, только настоящая и написанная кодом.</p>
+      <div class="card__buttons">
+        <button class="card__icon-button">
+          <svg class="like-icon" width="40" height="36" viewBox="0 0 40 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g class="heart">
+              <path class="contour" d="M20 34L3.5 18C3.5 18 0 15 0 10C0 5 3 2 8 2C12 2 16 6 20 10C24 6 28 2 32 2C37 2 40 5 40 10C40 15 36.5 18 36.5 18L20 34Z" fill="none" stroke="var(--contour-color, #000000)" stroke-width="2"/>
+              <path class="main-body" d="M20 30L7.5 18C7.5 18 5 15.5 5 11.5C5 7.5 7.5 5 11.5 5C14.5 5 17.5 8 20 11.5C22.5 8 25.5 5 28.5 5C32.5 5 35 7.5 35 11.5C35 15.5 32.5 18 32.5 18L20 30Z" fill="none"/>
+              <path class="core" d="M20 26L11.5 18C11.5 18 10 16 10 13.5C10 11 11.5 9.5 14 9.5C16 9.5 18 11.5 20 14C22 11.5 24 9.5 26 9.5C28.5 9.5 30 11 30 13.5C30 16 28.5 18 28.5 18L20 26Z" fill="none"/>
+            </g>
+            <path class="sparks" d="M20 5L21 8L24 9L21 10L20 13L19 10L16 9L19 8L20 5Z" fill="var(--animation-fill-color, #ff0000)" opacity="0"/>
+            <path class="sparks" d="M30 5L31 7L33 8L31 9L30 11L29 9L27 8L29 7L30 5Z" fill="var(--animation-fill-color, #ff0000)" opacity="0"/>
+            <path class="sparks" d="M10 5L11 7L13 8L11 9L10 11L9 9L7 8L9 7L10 5Z" fill="var(--animation-fill-color, #ff0000)" opacity="0"/>
+          </svg>
+        </button>
+        <button class="card__like-button">
+          <span class="button__text">Like</span>
+        </button>
+      </div>
+    </article>
+
+    <!-- КАРТОЧКА 7 -->
+    <article class="card">
+      <div class="card__image-container">
+        <img class="card__image card__image--invert" src="./images/photo7.jpg" alt="Анимации" loading="lazy">
+        <span class="card__label">Вдохновение</span>
+      </div>
+      <h2 class="card__title">Шаг 7. Анимации и жизнь</h2>
+      <p class="card__text">CSS-анимации вдохнули жизнь в мои проекты. Плавные переходы, трансформации, keyframes — сайты стали не просто статичными страницами, а настоящими историями.</p>
+      <div class="card__buttons">
+        <button class="card__icon-button">
+          <svg class="like-icon" width="40" height="36" viewBox="0 0 40 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g class="heart">
+              <path class="contour" d="M20 34L3.5 18C3.5 18 0 15 0 10C0 5 3 2 8 2C12 2 16 6 20 10C24 6 28 2 32 2C37 2 40 5 40 10C40 15 36.5 18 36.5 18L20 34Z" fill="none" stroke="var(--contour-color, #000000)" stroke-width="2"/>
+              <path class="main-body" d="M20 30L7.5 18C7.5 18 5 15.5 5 11.5C5 7.5 7.5 5 11.5 5C14.5 5 17.5 8 20 11.5C22.5 8 25.5 5 28.5 5C32.5 5 35 7.5 35 11.5C35 15.5 32.5 18 32.5 18L20 30Z" fill="none"/>
+              <path class="core" d="M20 26L11.5 18C11.5 18 10 16 10 13.5C10 11 11.5 9.5 14 9.5C16 9.5 18 11.5 20 14C22 11.5 24 9.5 26 9.5C28.5 9.5 30 11 30 13.5C30 16 28.5 18 28.5 18L20 26Z" fill="none"/>
+            </g>
+            <path class="sparks" d="M20 5L21 8L24 9L21 10L20 13L19 10L16 9L19 8L20 5Z" fill="var(--animation-fill-color, #ff0000)" opacity="0"/>
+            <path class="sparks" d="M30 5L31 7L33 8L31 9L30 11L29 9L27 8L29 7L30 5Z" fill="var(--animation-fill-color, #ff0000)" opacity="0"/>
+            <path class="sparks" d="M10 5L11 7L13 8L11 9L10 11L9 9L7 8L9 7L10 5Z" fill="var(--animation-fill-color, #ff0000)" opacity="0"/>
+          </svg>
+        </button>
+        <button class="card__like-button">
+          <span class="button__text">Like</span>
+        </button>
+      </div>
+    </article>
+
+    <!-- КАРТОЧКА 8 -->
+    <article class="card">
+      <div class="card__image-container">
+        <img class="card__image card__image--saturate" src="./images/photo8.jpg" alt="Финал" loading="lazy">
+        <span class="card__label">Финал</span>
+      </div>
+      <h2 class="card__title">Шаг 8. Конец — это только начало</h2>
+      <p class="card__text">Я прошёл этот путь. Было страшно, трудно, временами хотелось плакать. Но я здесь. Я сделал это. И теперь я могу сверстать что угодно. Спасибо всем, кто был рядом!</p>
+      <div class="card__buttons">
+        <button class="card__icon-button">
+          <svg class="like-icon" width="40" height="36" viewBox="0 0 40 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g class="heart">
+              <path class="contour" d="M20 34L3.5 18C3.5 18 0 15 0 10C0 5 3 2 8 2C12 2 16 6 20 10C24 6 28 2 32 2C37 2 40 5 40 10C40 15 36.5 18 36.5 18L20 34Z" fill="none" stroke="var(--contour-color, #000000)" stroke-width="2"/>
+              <path class="main-body" d="M20 30L7.5 18C7.5 18 5 15.5 5 11.5C5 7.5 7.5 5 11.5 5C14.5 5 17.5 8 20 11.5C22.5 8 25.5 5 28.5 5C32.5 5 35 7.5 35 11.5C35 15.5 32.5 18 32.5 18L20 30Z" fill="none"/>
+              <path class="core" d="M20 26L11.5 18C11.5 18 10 16 10 13.5C10 11 11.5 9.5 14 9.5C16 9.5 18 11.5 20 14C22 11.5 24 9.5 26 9.5C28.5 9.5 30 11 30 13.5C30 16 28.5 18 28.5 18L20 26Z" fill="none"/>
+            </g>
+            <path class="sparks" d="M20 5L21 8L24 9L21 10L20 13L19 10L16 9L19 8L20 5Z" fill="var(--animation-fill-color, #ff0000)" opacity="0"/>
+            <path class="sparks" d="M30 5L31 7L33 8L31 9L30 11L29 9L27 8L29 7L30 5Z" fill="var(--animation-fill-color, #ff0000)" opacity="0"/>
+            <path class="sparks" d="M10 5L11 7L13 8L11 9L10 11L9 9L7 8L9 7L10 5Z" fill="var(--animation-fill-color, #ff0000)" opacity="0"/>
+          </svg>
+        </button>
+        <button class="card__like-button">
+          <span class="button__text">Like</span>
+        </button>
+      </div>
+    </article>
+
+    <!-- КНОПКА СОХРАНЕНИЯ -->
+    <button class="save-button">
+      <svg class="save-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5 3h10l4 4v12c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2V5c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2" fill="none"/>
+        <rect x="8" y="6" width="8" height="4" stroke="currentColor" stroke-width="2" fill="none"/>
+      </svg>
+      <span class="button__text">Сохранить на память</span>
+    </button>
+  </main>
+
+  <footer class="footer">
+    <p class="footer__text">© 2024 Моё путешествие в вёрстку</p>
+  </footer>
+
+  <!-- МОДАЛЬНОЕ ОКНО -->
+  <dialog id="memory-dialog">
+    <div class="dialog__content">
+      <svg class="dialog__icon" width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5 3h10l4 4v12c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2V5c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2" fill="none"/>
+        <rect x="8" y="6" width="8" height="4" stroke="currentColor" stroke-width="2" fill="none"/>
+      </svg>
+      <p class="dialog__text">Этот момент сохранён<br>в твоей памяти</p>
+    </div>
+    <button class="dialog__button" id="close-dialog">
+      <span class="button__text">OK</span>
+    </button>
+  </dialog>
+
+  <!-- СКРИПТЫ -->
+  <script src="./scripts/js like.js"></script>
+  <script>
+    // Дополнительный скрипт для модального окна
+    const saveButton = document.querySelector('.save-button');
+    const dialog = document.getElementById('memory-dialog');
+    const closeButton = document.getElementById('close-dialog');
+
+    if (saveButton && dialog) {
+      saveButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        dialog.showModal();
+      });
+    }
+
+    if (closeButton && dialog) {
+      closeButton.addEventListener('click', () => {
+        dialog.close();
+      });
+    }
+
+    if (dialog) {
+      dialog.addEventListener('click', (e) => {
+        if (e.target === dialog) {
+          dialog.close();
+        }
+      });
+    }
+  </script>
+</body>
 </html>

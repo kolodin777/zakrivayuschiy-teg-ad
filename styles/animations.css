@@ -1,11 +1,106 @@
-/* Опишите в этом файле все keyframes для проекта и стили анимаций иконки Like.
+/* animations.css — исправленная версия */
 
-Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
-✦ like-icon — для svg-иконки анимированного сердца
-✦ card__like-button — для кнопки Like рядом с иконкой
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
-✦ button__text — для обозначения текстового элемента внутри кнопки
+/* КЕЙФРЕЙМЫ */
+@keyframes heart-scale {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}
 
+@keyframes sparks-fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* БАЗОВЫЕ СТИЛИ ИКОНКИ */
+.like-icon {
+  width: 40px;
+  height: 36px;
+  display: block;
+}
+
+/* НАЧАЛЬНОЕ СОСТОЯНИЕ:
+   - Контур (contour) — чёрный
+   - Сердцевина (core) — белая/прозрачная? 
+   - Основное тело (main-body) — белое/прозрачное?
+   Уточню: внутри белое — значит fill: white
 */
+.like-icon .core {
+  fill: white;
+  transition: fill 0.3s linear 0.03s;
+}
+
+.like-icon .main-body {
+  fill: white;
+  transition: fill 0.3s linear;
+}
+
+.like-icon .contour {
+  fill: var(--contour-color, #000000);
+  transition: fill 0.1s linear;
+}
+
+.like-icon .sparks {
+  fill: var(--animation-fill-color, #ff0000);
+  opacity: 0;
+}
+
+/* ===== HOVER (наведение) ===== */
+/* Сердцевина становится чёрной */
+.like-icon:hover .core {
+  fill: var(--contour-color, #000000);
+  transition: fill 0.3s linear;
+}
+
+/* Основное тело становится чёрным с задержкой */
+.like-icon:hover .main-body {
+  fill: var(--contour-color, #000000);
+  transition: fill 0.3s linear 0.05s;
+}
+
+/* ===== ACTIVE (зажатие) ===== */
+/* Сердцевина становится красной */
+.like-icon:active .core {
+  fill: var(--animation-fill-color, #ff0000);
+  transition: fill 0.3s linear;
+}
+
+/* Основное тело становится красным с задержкой */
+.like-icon:active .main-body {
+  fill: var(--animation-fill-color, #ff0000);
+  transition: fill 0.3s linear 0.05s;
+}
+
+/* ===== IS-LIKED (клик) ===== */
+/* Всё становится красным */
+.like-icon.is-liked .core {
+  fill: var(--animation-fill-color, #ff0000);
+  transition: fill 0.3s linear;
+}
+
+.like-icon.is-liked .main-body {
+  fill: var(--animation-fill-color, #ff0000);
+  transition: fill 0.3s linear 0.05s;
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--animation-fill-color, #ff0000);
+  transition: fill 0.3s linear 0.1s;
+}
+
+/* Масштабирование сердца */
+.like-icon.is-liked .heart {
+  animation: heart-scale 0.3s ease-in 0.1s 1 normal forwards;
+}
+
+/* Искры */
+.like-icon.is-liked .sparks {
+  animation: sparks-fade 0.3s ease-in 0.3s 1 normal forwards;
+}
