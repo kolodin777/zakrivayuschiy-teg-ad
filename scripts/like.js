@@ -13,12 +13,17 @@ const likeButtonArray = document.querySelectorAll('.card__like-button');
 const iconButtonArray = document.querySelectorAll('.card__icon-button');
 
 iconButtonArray.forEach((iconButton, index) => {
-  iconButton.onclick = () =>
+  iconButton.onclick = (event) => {
+    event.preventDefault();  // ДОБАВЛЕНО — предотвращает перезагрузку
     toggleIsLiked(likeHeartArray[index], likeButtonArray[index]);
+  };
 });
 
 likeButtonArray.forEach((button, index) => {
-  button.onclick = () => toggleIsLiked(likeHeartArray[index], button);
+  button.onclick = (event) => {
+    event.preventDefault();  // ДОБАВЛЕНО — предотвращает перезагрузку
+    toggleIsLiked(likeHeartArray[index], button);
+  };
 });
 
 function toggleIsLiked(heart, button) {
@@ -38,4 +43,31 @@ function setButtonText(heart, button) {
       500
     );
   }
+}
+
+// ДОБАВЛЕНА НИЖНЯЯ ЧАСТЬ — для модального окна
+const saveButton = document.querySelector('.save-button');
+const dialog = document.getElementById('memory-dialog');
+const closeButton = document.getElementById('close-dialog');
+
+if (saveButton && dialog) {
+  saveButton.addEventListener('click', (event) => {
+    event.preventDefault();  // Предотвращает перезагрузку
+    dialog.showModal();
+  });
+}
+
+if (closeButton && dialog) {
+  closeButton.addEventListener('click', (event) => {
+    event.preventDefault();  // Предотвращает перезагрузку
+    dialog.close();
+  });
+}
+
+if (dialog) {
+  dialog.addEventListener('click', (event) => {
+    if (event.target === dialog) {
+      dialog.close();
+    }
+  });
 }
