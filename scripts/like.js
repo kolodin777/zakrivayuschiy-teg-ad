@@ -1,27 +1,17 @@
-/* этот скрипт использует такие имена классов:
-✦ like-icon — для svg-иконки анимированного сердца
-✦ card__like-button — для кнопки Like рядом с иконкой
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
-✦ button__text — для обозначения текстового элемента внутри кнопки
-Если эти классы поменять в HTML, скрипт перестанет работать. Будьте аккуратны.
-*/
-
 const likeHeartArray = document.querySelectorAll('.like-icon');
 const likeButtonArray = document.querySelectorAll('.card__like-button');
 const iconButtonArray = document.querySelectorAll('.card__icon-button');
 
 iconButtonArray.forEach((iconButton, index) => {
   iconButton.onclick = (event) => {
-    event.preventDefault();  // ДОБАВЛЕНО — предотвращает перезагрузку
+    event.preventDefault();
     toggleIsLiked(likeHeartArray[index], likeButtonArray[index]);
   };
 });
 
 likeButtonArray.forEach((button, index) => {
   button.onclick = (event) => {
-    event.preventDefault();  // ДОБАВЛЕНО — предотвращает перезагрузку
+    event.preventDefault();
     toggleIsLiked(likeHeartArray[index], button);
   };
 });
@@ -45,21 +35,21 @@ function setButtonText(heart, button) {
   }
 }
 
-// ДОБАВЛЕНА НИЖНЯЯ ЧАСТЬ — для модального окна
+// Код для модального окна
 const saveButton = document.querySelector('.save-button');
 const dialog = document.getElementById('memory-dialog');
 const closeButton = document.getElementById('close-dialog');
 
 if (saveButton && dialog) {
   saveButton.addEventListener('click', (event) => {
-    event.preventDefault();  // Предотвращает перезагрузку
+    event.preventDefault();
     dialog.showModal();
   });
 }
 
 if (closeButton && dialog) {
   closeButton.addEventListener('click', (event) => {
-    event.preventDefault();  // Предотвращает перезагрузку
+    event.preventDefault();
     dialog.close();
   });
 }
