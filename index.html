@@ -265,32 +265,5 @@
 
   <!-- СКРИПТЫ -->
   <script src="./scripts/js-like.js"></script>
-  <script>
-    // Дополнительный скрипт для модального окна
-    const saveButton = document.querySelector('.save-button');
-    const dialog = document.getElementById('memory-dialog');
-    const closeButton = document.getElementById('close-dialog');
-
-    if (saveButton && dialog) {
-      saveButton.addEventListener('click', (e) => {
-        e.preventDefault();
-        dialog.showModal();
-      });
-    }
-
-    if (closeButton && dialog) {
-      closeButton.addEventListener('click', () => {
-        dialog.close();
-      });
-    }
-
-    if (dialog) {
-      dialog.addEventListener('click', (e) => {
-        if (e.target === dialog) {
-          dialog.close();
-        }
-      });
-    }
-  </script>
 </body>
 </html>
